@@ -1,0 +1,606 @@
+/* Import Font Google: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Variabel CSS untuk kemudahan kustomisasi */
+:root {
+    --primary-color: #007bff; /* Biru cerah */
+    --secondary-color: #2c3e50; /* Biru tua gelap */
+    --accent-color: #28a745; /* Hijau cerah untuk highlight */
+    --background-light: #f4f7f6; /* Latar belakang terang */
+    --background-dark: #1a202c; /* Latar belakang gelap untuk section tertentu */
+    --text-color-light: #333333; /* Teks gelap di latar terang */
+    --text-color-dark: #ecf0f1; /* Teks terang di latar gelap */
+    --white-color: #ffffff;
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-dark: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--background-light);
+    color: var(--text-color-light);
+    line-height: 1.6;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: var(--shadow-light);
+    transition: all 0.3s ease;
+}
+
+.header.sticky {
+    padding: 1.5rem 9%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.logo {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color-light);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: 0.3s ease;
+}
+
+.navbar a:hover::before,
+.navbar a.active::before {
+    width: 100%;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--primary-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background: var(--background-light);
+}
+
+.home-content {
+    max-width: 60rem;
+    animation: fadeInContent 1s ease-in-out;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+.home-content .profession {
+    font-size: 3.2rem;
+    margin-top: 1rem;
+}
+
+.home-content .profession .typing-text {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    margin: 2.5rem 0 3.5rem;
+    color: var(--text-color-light);
+}
+
+.social-media {
+    margin-bottom: 2rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    font-size: 2.2rem;
+    color: var(--white-color);
+    margin: 0 1rem 0 0;
+    transition: all 0.4s ease;
+}
+
+.social-media a:hover {
+    background: transparent;
+    color: var(--primary-color);
+    box-shadow: 0 0 1.5rem var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.4rem 3.5rem;
+    background: var(--primary-color);
+    border-radius: 4rem;
+    box-shadow: 0 0.8rem 1.5rem rgba(0, 123, 255, 0.3);
+    font-size: 1.7rem;
+    color: var(--white-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    margin-top: 1rem;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    box-shadow: 0 0.8rem 1.5rem rgba(44, 62, 80, 0.3);
+}
+
+.home-img {
+    width: 35vw;
+    min-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 4rem rgba(0, 123, 255, 0.4);
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* About Section */
+.about {
+    background: var(--secondary-color);
+    color: var(--text-color-dark);
+}
+
+.about .heading {
+    color: var(--white-color);
+}
+
+.about-content {
+    text-align: center;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.about-content h3 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills {
+    background: var(--background-light);
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    margin-top: 4rem;
+}
+
+.skill-box {
+    flex: 1 1 30rem;
+    background: var(--white-color);
+    padding: 3.5rem 2.5rem;
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-bottom: 5px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.skill-box:hover {
+    transform: translateY(-1.5rem);
+    box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.15);
+}
+
+.skill-box i {
+    font-size: 6rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.skill-box h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.skill-box p {
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: var(--background-dark);
+}
+
+.portfolio .heading {
+    color: var(--white-color);
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 3.5rem;
+    margin-top: 4rem;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-dark);
+    transition: transform 0.4s ease;
+}
+
+.portfolio-box:hover {
+    transform: scale(1.03);
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--white-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-layer a:hover {
+    background: var(--accent-color);
+    color: var(--white-color);
+}
+
+/* Contact Section */
+.contact {
+    background: var(--background-light);
+}
+
+.contact form {
+    max-width: 80rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 3rem;
+    background: var(--white-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-light);
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color-light);
+    background: var(--background-light);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid #e0e0e0;
+    resize: none;
+    font-family: var(--font-family);
+    transition: border-color 0.3s ease;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.contact form textarea {
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5rem 9%;
+    background: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+/* --- PERBAIKAN: BUTTON SCROLL TOP --- */
+.footer-iconTop {
+    position: fixed; /* Kunci posisi agar mengambang */
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: none; /* Awalnya sembunyi, dimunculkan JS saat scroll */
+    animation: fadeIn 0.5s ease;
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem; /* Sedikit diperbesar */
+    background: var(--primary-color);
+    border-radius: 5px; /* Sedikit kotak, atau ganti 50% untuk bulat */
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1.5rem var(--primary-color);
+    transform: translateY(-0.5rem);
+    background: var(--white-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--white-color);
+}
+
+.footer-iconTop a:hover i {
+    color: var(--primary-color);
+}
+
+/* Animasi untuk Button Scroll Top */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animasi (Reveal on Scroll) */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Keyframe for initial home content fade-in */
+@keyframes fadeInContent {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 4%;
+    }
+    section {
+        padding: 10rem 4% 2rem;
+    }
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    .home-content .profession {
+        font-size: 2.8rem;
+    }
+    .home-img {
+        width: 60vw;
+        margin-top: 4rem;
+    }
+    .about-content {
+        padding: 0;
+    }
+    .skills-container, .portfolio-container {
+        gap: 2.5rem;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--white-color);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar.active {
+        display: flex;
+    }
+    .navbar a {
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+    .home-content h1 {
+        font-size: 3.8rem;
+    }
+    .home-content .profession {
+        font-size: 2.4rem;
+    }
+    .home-img {
+        width: 80vw;
+    }
+    .heading {
+        font-size: 4rem;
+    }
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+    .contact form .input-box {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    .home-content .profession {
+        font-size: 2rem;
+    }
+    .home-img {
+        width: 90vw;
+    }
+}

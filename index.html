@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Zainal </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">ZAN<span>ELL</span>.</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Beranda</a>
+            <a href="#about">Tentang</a>
+            <a href="#skills">Keahlian</a>
+            <a href="#portfolio">Portofolio</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+        <div id="menu-icon" class="fas fa-bars"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Halo, Saya</h3>
+            <h1>MUHAMMAD ZAINAL FACHRUDDIN</h1>
+            <h3 class="profession">Seorang <span class="typing-text"></span></h3>
+            <p>Saya adalah seorang Mahasiswa Web Developer dan Desainer UI/UX yang bersemangat menciptakan pengalaman digital yang indah dan fungsional. Mari kita wujudkan ide Anda!</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="#portfolio" class="btn">Lihat Proyek Saya</a>
+        </div>
+        <div class="home-img reveal">
+            <img src="your-photo.jpg" alt="Foto Profil Anda">
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="heading reveal">Tentang <span>Saya</span></h2>
+        <div class="about-content reveal">
+            <p>Saya adalah seorang profesional di bidang Front-End Development dengan pengalaman selama 1 tahun. Saya memiliki minat besar dalam membangun antarmuka pengguna yang intuitif dan responsif. dan selalu antusias mempelajari teknologi baru.</p>
+            <p>Filosofi kerja saya adalah menggabungkan estetika desain yang kuat dengan kode yang bersih dan performa tinggi. Di luar coding, saya suka  bermain musik, atau menonton film fiksi ilmiah. Saya percaya setiap tantangan adalah kesempatan untuk belajar dan berkembang.</p>
+            <a href="your-cv.pdf" class="btn" download>Unduh CV Saya</a>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading reveal">Keahlian <span>Saya</span></h2>
+        <div class="skills-container">
+            <div class="skill-box reveal">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <p>Penguasaan struktur web semantik dan standar terbaru.</p>
+            </div>
+            <div class="skill-box reveal">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3 & TailwindCSS</h3>
+                <p>Desain responsif, animasi, dan *framework* CSS modern.</p>
+            </div>
+            <div class="skill-box reveal">
+                <i class="fab fa-js-square"></i>
+                <h3>JavaScript (ES6+)</h3>
+                <p>Logika sisi klien, interaktivitas, dan pengembangan aplikasi.</p>
+            </div>
+            <div class="skill-box reveal">
+                <i class="fab fa-react"></i>
+                <h3>React / Vue.js</h3>
+                <p>Membangun antarmuka pengguna interaktif dan modular.</p>
+            </div>
+            <div class="skill-box reveal">
+                <i class="fas fa-code"></i>
+                <h3>Backend (Node.js)</h3>
+                <p>Pengembangan API dan *server-side* dengan Express.js.</p>
+            </div>
+            <div class="skill-box reveal">
+                <i class="fas fa-database"></i>
+                <h3>Database (SQL/NoSQL)</h3>
+                <p>Perancangan dan manajemen database untuk aplikasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading reveal">Proyek <span>Terbaru</span></h2>
+        <div class="portfolio-container">
+            
+            <div class="portfolio-box reveal">
+                <img src="project-ecommerce.jpg" alt="Proyek E-commerce">
+                <div class="portfolio-layer">
+                    <h4>Website E-commerce Modern</h4>
+                    <p>Membangun platform belanja yang responsif dan aman menggunakan React & Redux.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box reveal">
+                <img src="project-mobile-app.jpg" alt="Aplikasi Mobile">
+                <div class="portfolio-layer">
+                    <h4>Aplikasi Mobile Perjalanan</h4>
+                    <p>Merancang UI/UX dan mengembangkan aplikasi *booking* perjalanan dengan React Native.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box reveal">
+                <img src="project-dashboard.jpg" alt="Dashboard Admin">
+                <div class="portfolio-layer">
+                    <h4>Dashboard Analitik Interaktif</h4>
+                    <p>Membuat dashboard admin untuk visualisasi data dengan Chart.js dan Vue.js.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading reveal">Hubungi <span>Saya</span></h2>
+        <form action="mailto:emailanda@example.com" method="post" enctype="text/plain" class="reveal">
+            <div class="input-box">
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="email" placeholder="Alamat Email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Nomor Telepon">
+                <input type="text" placeholder="Subjek Email" required>
+            </div>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Pesan Anda" required></textarea>
+            <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-text reveal">
+            <p>Hak Cipta &copy; 2025 | Dibuat dengan ❤️ oleh ZANELL.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
