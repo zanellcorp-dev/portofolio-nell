@@ -65,3 +65,10 @@ const typed = new Typed('.typing-text', {
     backDelay: 1000,
     loop: true
 });
+
+const typed = new Typed('.typing-text', {
+    strings: ['Web Developer', 'UI/UX Designer', 'Mahasiswa Teknik'],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
